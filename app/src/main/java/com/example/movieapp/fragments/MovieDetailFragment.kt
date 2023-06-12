@@ -142,7 +142,6 @@ class MovieDetailFragment : Fragment() {
                         val key = trailers[0].key
 
                         binding.ivTrailer.setOnClickListener {
-                            Log.i("youtube", trailers[0].key.toString())
                             openVideoPlayer(it.context, "https://www.youtube.com/watch?v=${key}")
                         }
 
