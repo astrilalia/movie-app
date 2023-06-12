@@ -7,10 +7,14 @@ import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import com.example.movieapp.databinding.ActivityTrailerBinding
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
 
 class TrailerActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityTrailerBinding
+//    private val youtubePlayerView = YouTubePlayerView(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +23,8 @@ class TrailerActivity : AppCompatActivity() {
 
         val videoUrl = intent.getStringExtra("videoUrl")
         videoUrl?.let {
-            loadVideoUrl(it)
+            loadVideoUrl(videoUrl)
+//            loadTrailerUrl(videoUrl)
         }
     }
 
@@ -33,6 +38,15 @@ class TrailerActivity : AppCompatActivity() {
         }
         binding.webView.loadUrl(videoUrl)
     }
+
+//    private fun loadTrailerUrl(videoUrl: String) {
+//        youtubePlayerView.initialize(object : AbstractYouTubePlayerListener() {
+//            override fun onReady(youTubePlayer: YouTubePlayer) {
+//                super.onReady(youTubePlayer)
+//                youTubePlayer.cueVideo(videoUrl,0f)
+//            }
+//        })
+//    }
 
     override fun onDestroy() {
         super.onDestroy()
