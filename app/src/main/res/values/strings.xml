@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Movie App</string>
+    <string name="genre_list">Genre List</string>
+    <string name="movie_list">Movie List</string>
+    <string name="splash">Splash</string>
+    <string name="action">Action</string>
+    <string name="release_date">Release Date</string>
+    <string name="movie_title">Movie Title</string>
+    <string name="poster">poster</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="trailer">trailer</string>
+    <string name="avatar">avatar</string>
+    <string name="review">Review</string>
+    <string name="overview">Overview</string>
+</resources>
